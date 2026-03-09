@@ -165,7 +165,8 @@ export default function ContactSection() {
               <label className="form-label" htmlFor="preferred_start_date">Preferred Start Date</label>
               <Input
                 id="preferred_start_date"
-                type="date"
+                type="text"
+                placeholder="DD/MM/YYYY"
                 className="industrial-input"
                 data-testid="contact-start-date-input"
                 {...register("preferred_start_date")}
