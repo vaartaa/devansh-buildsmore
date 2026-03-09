@@ -1,0 +1,126 @@
+{
+  "project_name": "Devansh Buildsmore",
+  "design_philosophy": {
+    "persona": "E1: The Anti-AI Designer",
+    "core_principles": [
+      "Fusion over Imitation: Combine industrial rawness with high-end luxury.",
+      "Emotion First: Evoke strength, reliability, and precision.",
+      "Content is King: Every scroll tells the story of building dreams.",
+      "Zoom In: Focus on textures (concrete, steel, glass).",
+      "Negative Space: Use deep black voids to frame content."
+    ],
+    "anti_patterns": [
+      "No generic 'construction blue'.",
+      "No 'Inter' for headings.",
+      "No centered layouts everywhere.",
+      "No gradient overload."
+    ]
+  },
+  "theme": {
+    "mode": "dark",
+    "strategy": "Obsidian Industrial",
+    "palette": {
+      "background": "#0A0A0A",
+      "surface": "#121212",
+      "surface_highlight": "#1E1E1E",
+      "primary": "#FF6B00",
+      "primary_foreground": "#000000",
+      "secondary": "#888888",
+      "text_primary": "#EDEDED",
+      "text_secondary": "#A1A1AA",
+      "border": "#333333",
+      "success": "#22C55E",
+      "error": "#EF4444"
+    },
+    "typography": {
+      "font_heading": "Oswald",
+      "font_body": "Manrope",
+      "weights": {
+        "heading": "700",
+        "subheading": "500",
+        "body": "400"
+      },
+      "rules": [
+        "Headings must be Uppercase and 'tracking-tight'.",
+        "Body text must have relaxed line-height.",
+        "Use 'Oswald' for numbers/stats to emphasize scale."
+      ]
+    }
+  },
+  "layout_strategy": {
+    "spacing": "Generous (2-3x standard). Use 'p-8' to 'p-32' for sections.",
+    "container": "max-w-7xl mx-auto px-6",
+    "grid_system": "Bento Grid (Mode A) for Services/Projects.",
+    "alignment": "Left-aligned text for readability, asymmetrical layouts for interest."
+  },
+  "visual_enhancers": {
+    "texture": "Subtle noise overlay (opacity 0.03) on all dark backgrounds.",
+    "borders": "1px solid #333333 with optional 'glow' effect on hover.",
+    "shadows": "Hard shadows or 'glow' shadows for primary elements (e.g., 'shadow-[0_0_20px_rgba(255,107,0,0.3)]').",
+    "glassmorphism": "Used sparingly for sticky nav and floating controls (backdrop-blur-xl, bg-black/70, border-white/10)."
+  },
+  "components": {
+    "button": {
+      "style": "Sharp edges or minimal rounded (rounded-sm). High contrast.",
+      "primary": "bg-[#FF6B00] text-black hover:bg-[#FF8C00] font-bold uppercase tracking-wider",
+      "secondary": "border border-[#333333] text-white hover:border-[#FF6B00] hover:text-[#FF6B00] bg-transparent"
+    },
+    "card": {
+      "style": "Flat background (#121212), 1px border (#333333). Hover: border-[#FF6B00] transition-colors duration-300."
+    },
+    "input": {
+      "style": "bg-[#0A0A0A] border-[#333333] focus:border-[#FF6B00] text-white rounded-none h-12"
+    },
+    "section_transitions": {
+      "style": "Parallax scroll or sticky revealing sections. Background changes based on scroll position."
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "scroll": "lenis (smooth scrolling mandatory)",
+    "effects": [
+      "Staggered text reveals (y: 20 -> 0, opacity: 0 -> 1).",
+      "Image parallax (y: -20% on scroll).",
+      "Sticky section headers."
+    ]
+  },
+  "assets": {
+    "images": {
+      "hero_background": "https://images.unsplash.com/photo-1764296377236-47c335321bad?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHw0fHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwY3JhbmUlMjBzdW5zZXQlMjBzaWxob3VldHRlJTIwZGFyayUyMGluZHVzdHJpYWx8ZW58MHx8fHwxNzczMDgyNjQ4fDA&ixlib=rb-4.1.0&q=85",
+      "services_bg": "https://images.unsplash.com/photo-1759395162304-3b3cce678d71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwY3JhbmUlMjBzdW5zZXQlMjBzaWxob3VldHRlJTIwZGFyayUyMGluZHVzdHJpYWx8ZW58MHx8fHwxNzczMDgyNjQ4fDA&ixlib=rb-4.1.0&q=85",
+      "projects": [
+        "https://images.pexels.com/photos/18435276/pexels-photo-18435276.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.pexels.com/photos/31637239/pexels-photo-31637239.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "https://images.unsplash.com/photo-1762162147822-c5c87cede739?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwyfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwY3JhbmUlMjBzdW5zZXQlMjBzaWxob3VldHRlJTIwZGFyayUyMGluZHVzdHJpYWx8ZW58MHx8fHwxNzczMDgyNjQ4fDA&ixlib=rb-4.1.0&q=85"
+      ],
+      "textures": "https://images.unsplash.com/photo-1758787394739-a4bc2cb88d94?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NzV8MHwxfHNlYXJjaHwzfHxjb25zdHJ1Y3Rpb24lMjBzaXRlJTIwY3JhbmUlMjBzdW5zZXQlMjBzaWxob3VldHRlJTIwZGFyayUyMGluZHVzdHJpYWx8ZW58MHx8fHwxNzczMDgyNjQ4fDA&ixlib=rb-4.1.0&q=85"
+    },
+    "icons": "lucide-react (Construction, HardHat, Hammer, Blueprint, Building, MapPin, Phone, Mail, ArrowRight)"
+  },
+  "accessibility": {
+    "contrast": "Ensure text is #EDEDED on #0A0A0A backgrounds.",
+    "interactive": "All buttons must have a focus ring (ring-2 ring-offset-2 ring-[#FF6B00]).",
+    "testing": "All interactive elements must have 'data-testid' attributes (e.g., 'contact-submit-btn')."
+  },
+  "instructions_to_main_agent": [
+    "1. Setup: Install 'lenis' for smooth scrolling and 'framer-motion' for animations.",
+    "2. Fonts: Import 'Oswald' and 'Manrope' from Google Fonts.",
+    "3. Theme: Enforce dark mode by default. Add 'dark' class to html/body.",
+    "4. Component Customization: Override Shadcn defaults to match the 'Obsidian Industrial' theme (remove rounded corners, increase contrast).",
+    "5. Hero Section: Implement a full-screen hero with the 'hero_background' image and a parallax text effect.",
+    "6. Services Section: Create a Bento Grid layout using the provided colors.",
+    "7. Contact Form: Build a high-contrast form with sharp edges and validation.",
+    "8. Footer: massive typography for the brand name.",
+    "9. Universal Guidelines: Follow the 'UNIVERSAL GUIDELINES FOR MAIN AGENT' strictly."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not use generic 'on distribution' AI outputs.",
+    "Avoid 'Inter' everywhere. Use the specified fonts.",
+    "Create depth with z-index and layered elements.",
+    "Do not center everything; use asymmetry.",
+    "Add micro-interactions to every button and link.",
+    "Use 'sonner' for toasts.",
+    "Ensure all interactive elements have 'data-testid'.",
+    "Do not use transparent backgrounds without blur/scrim for text readability."
+  ]
+}
