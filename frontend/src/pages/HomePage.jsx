@@ -79,7 +79,15 @@ export default function HomePage() {
       <div className="content-stage">
         <header className="glass-nav" data-testid="top-navigation">
           <div className="content-container nav-inner">
-            <a href="#hero" className="brand-mark" data-testid="nav-brand-link">Devansh Buildsmore</a>
+            <a href="#hero" className="brand-mark flex items-center gap-3" data-testid="nav-brand-link">
+              <img
+                src="/logo_devansh.png"
+                alt="Devansh Buildsmore Logo"
+                className="h-10 w-auto"
+                style={{ filter: 'brightness(1.1)' }}
+              />
+              <span>Devansh Buildsmore</span>
+            </a>
             <nav className="nav-links" data-testid="nav-links-wrapper">
               {navItems.map((item) => (
                 <a href={`#${item.key}`} key={item.key} className="nav-link" data-testid={`nav-link-${item.key}`}>

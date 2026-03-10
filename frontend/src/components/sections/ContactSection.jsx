@@ -1,12 +1,9 @@
 import { useState } from "react";
-import axios from "axios";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-
-const CONTACT_API_URL = `${process.env.REACT_APP_BACKEND_URL}/api/contact`;
 
 const projectTypes = ["Residential Home", "Commercial Complex", "Multiplex Development", "Renovation", "Other"];
 const budgetRanges = ["Below ₹50L", "₹50L - ₹1Cr", "₹1Cr - ₹3Cr", "Above ₹3Cr", "To be discussed"];
@@ -23,23 +20,31 @@ export default function ContactSection() {
   const onSubmit = async (values) => {
     setSubmitting(true);
     try {
-      await axios.post(CONTACT_API_URL, values);
-      toast.success("Enquiry sent successfully. Our team will contact you soon.");
-      reset({
-        name: "",
-        email: "",
-        phone: "",
-        interest_area: "",
-        project_type: "",
-        budget_range: "",
-        plot_area: "",
-        preferred_start_date: "",
-        city_location: "",
-        message: "",
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: process.env.REACT_APP_WEB3FORMS_ACCESS_KEY,
+          subject: `New Enquiry from ${values.name} - ${values.project_type || 'General'}`,
+          from_name: "Devansh Buildsmore Website",
+          ...values,
+        }),
       });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast.success("Enquiry sent successfully. Our team will contact you soon.");
+        reset();
+      } else {
+        throw new Error(result.message || "Failed to send enquiry");
+      }
     } catch (error) {
-      const detail = error?.response?.data?.detail;
-      toast.error(typeof detail === "string" ? detail : "Unable to submit enquiry. Please try again.");
+      toast.error("Unable to submit enquiry. Please try again.");
+      console.error("Form submission error:", error);
     } finally {
       setSubmitting(false);
     }

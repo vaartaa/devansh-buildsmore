@@ -38,19 +38,22 @@ export const serviceCards = [
 export const projectHighlights = [
   {
     name: "Premium Residences",
-    blurb: "Elegant urban homes balancing space, daylight and long-term structural reliability.",
+    blurb:
+      "Elegant urban homes balancing space, daylight and long-term structural reliability.",
     image:
       "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=900",
   },
   {
     name: "Retail & Multiplex Shells",
-    blurb: "High-footfall commercial structures built for heavy usage and future expansion.",
+    blurb:
+      "High-footfall commercial structures built for heavy usage and future expansion.",
     image:
       "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=900",
   },
   {
     name: "Industrial Buildouts",
-    blurb: "Warehousing and process-ready spaces planned around efficient movement and safety.",
+    blurb:
+      "Warehousing and process-ready spaces planned around efficient movement and safety.",
     image:
       "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=900",
   },
@@ -87,8 +90,6 @@ export const serviceAreas = [
   "Ghaziabad",
   "Noida",
   "Greater Noida",
-  "Indirapuram",
-  "Vaishali",
   "Delhi NCR",
   "Meerut",
   "Nearby UP Regions",
