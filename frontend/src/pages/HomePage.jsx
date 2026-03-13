@@ -11,7 +11,14 @@ import CoverageSection from "@/components/sections/CoverageSection";
 import ContactSection from "@/components/sections/ContactSection";
 import SiteFooter from "@/components/sections/SiteFooter";
 
-const sectionOrder = ["hero", "services", "projects", "process", "coverage", "contact"];
+const sectionOrder = [
+  "hero",
+  "services",
+  "projects",
+  "process",
+  "coverage",
+  "contact",
+];
 
 const navItems = [
   { key: "services", label: "Services" },
@@ -68,7 +75,9 @@ export default function HomePage() {
           <div
             key={sectionKey}
             className={`bg-image-layer ${activeSection === sectionKey ? "is-active" : ""}`}
-            style={{ backgroundImage: `url(${sectionBackgrounds[sectionKey]})` }}
+            style={{
+              backgroundImage: `url(${sectionBackgrounds[sectionKey]})`,
+            }}
             data-testid={`bg-layer-${sectionKey}`}
           />
         ))}
@@ -79,35 +88,80 @@ export default function HomePage() {
       <div className="content-stage">
         <header className="glass-nav" data-testid="top-navigation">
           <div className="content-container nav-inner">
-            <a href="#hero" className="brand-mark flex items-center gap-3" data-testid="nav-brand-link">
+            <a
+              href="#hero"
+              className="brand-mark flex items-center gap-3"
+              data-testid="nav-brand-link"
+            >
               <img
                 src="/logo_devansh.png"
                 alt="Devansh Buildsmore Logo"
-                className="h-10 w-auto"
-                style={{ filter: 'brightness(1.1)' }}
+                className="h-16 w-auto"
+                style={{ filter: "brightness(1.1)" }}
               />
               <span>Devansh Buildsmore</span>
             </a>
             <nav className="nav-links" data-testid="nav-links-wrapper">
               {navItems.map((item) => (
-                <a href={`#${item.key}`} key={item.key} className="nav-link" data-testid={`nav-link-${item.key}`}>
+                <a
+                  href={`#${item.key}`}
+                  key={item.key}
+                  className="nav-link"
+                  data-testid={`nav-link-${item.key}`}
+                >
                   {item.label}
                 </a>
               ))}
             </nav>
-            <a href="#contact" className="nav-cta" data-testid="nav-contact-button">
+            <a
+              href="#contact"
+              className="nav-cta"
+              data-testid="nav-contact-button"
+            >
               Start Your Project <ArrowRight className="h-4 w-4" />
             </a>
           </div>
         </header>
 
         <main>
-          <section id="hero" data-scroll-section="true" data-section-key="hero"><HeroSection /></section>
-          <section id="services" data-scroll-section="true" data-section-key="services"><ServicesSection /></section>
-          <section id="projects" data-scroll-section="true" data-section-key="projects"><ProjectsSection /></section>
-          <section id="process" data-scroll-section="true" data-section-key="process"><ProcessSection /></section>
-          <section id="coverage" data-scroll-section="true" data-section-key="coverage"><CoverageSection /></section>
-          <section id="contact" data-scroll-section="true" data-section-key="contact"><ContactSection /></section>
+          <section id="hero" data-scroll-section="true" data-section-key="hero">
+            <HeroSection />
+          </section>
+          <section
+            id="services"
+            data-scroll-section="true"
+            data-section-key="services"
+          >
+            <ServicesSection />
+          </section>
+          <section
+            id="projects"
+            data-scroll-section="true"
+            data-section-key="projects"
+          >
+            <ProjectsSection />
+          </section>
+          <section
+            id="process"
+            data-scroll-section="true"
+            data-section-key="process"
+          >
+            <ProcessSection />
+          </section>
+          <section
+            id="coverage"
+            data-scroll-section="true"
+            data-section-key="coverage"
+          >
+            <CoverageSection />
+          </section>
+          <section
+            id="contact"
+            data-scroll-section="true"
+            data-section-key="contact"
+          >
+            <ContactSection />
+          </section>
         </main>
 
         <motion.div
