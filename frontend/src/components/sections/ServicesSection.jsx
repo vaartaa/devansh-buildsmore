@@ -10,10 +10,10 @@ export default function ServicesSection() {
     <div className="section-shell">
       <div className="content-container space-y-10">
         <div className="max-w-3xl space-y-4">
-          <p className="section-eyebrow" data-testid="services-eyebrow">Capabilities</p>
-          <h2 className="section-title" data-testid="services-title">Construction Services Across the Full Project Lifecycle</h2>
+          <p className="section-eyebrow" data-testid="services-eyebrow">Our Services</p>
+          <h2 className="section-title" data-testid="services-title">Comprehensive Construction Solutions from Concept to Completion</h2>
           <p className="section-description" data-testid="services-description">
-            From independent homes to commercial complexes, our teams handle civil execution, structural integrity, and coordinated project delivery.
+            With over 13 years of experience and ISO 9001:2015 certification, we deliver turnkey construction services for residential, commercial, institutional and industrial projects with a focus on quality, efficiency and timely execution.
           </p>
         </div>
 

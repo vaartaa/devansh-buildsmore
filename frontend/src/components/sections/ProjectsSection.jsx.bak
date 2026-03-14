@@ -6,10 +6,10 @@ export default function ProjectsSection() {
     <div className="section-shell">
       <div className="content-container space-y-10">
         <div className="max-w-3xl space-y-4">
-          <p className="section-eyebrow" data-testid="projects-eyebrow">Our Projects</p>
-          <h2 className="section-title" data-testid="projects-title">Diverse Portfolio of Successfully Delivered Projects</h2>
+          <p className="section-eyebrow" data-testid="projects-eyebrow">Portfolio Focus</p>
+          <h2 className="section-title" data-testid="projects-title">Project Categories We Execute Regularly</h2>
           <p className="section-description" data-testid="projects-description">
-            From residential complexes to commercial buildings and industrial facilities, we have successfully delivered projects worth over ₹100 crores across NCR and nearby regions with proven expertise and quality execution.
+            We are structured for both small and large project scales, with dedicated supervision and process consistency.
           </p>
         </div>
 

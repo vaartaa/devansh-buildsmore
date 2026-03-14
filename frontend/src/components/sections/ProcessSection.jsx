@@ -6,10 +6,10 @@ export default function ProcessSection() {
     <div className="section-shell">
       <div className="content-container space-y-10">
         <div className="max-w-3xl space-y-4">
-          <p className="section-eyebrow" data-testid="process-eyebrow">Execution Model</p>
-          <h2 className="section-title" data-testid="process-title">A Practical Four-Stage Delivery System</h2>
+          <p className="section-eyebrow" data-testid="process-eyebrow">Our Process</p>
+          <h2 className="section-title" data-testid="process-title">Systematic Approach from Concept to Handover</h2>
           <p className="section-description" data-testid="process-description">
-            Our process is intentionally transparent: measurable milestones, structured updates, and accountable engineering decisions.
+            Our ISO 9001:2015 certified process ensures quality at every stage, with experienced technical teams, modern engineering techniques, and transparent project management for timely delivery.
           </p>
         </div>
 

@@ -7,6 +7,7 @@ import HeroSection from "@/components/sections/HeroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import ProcessSection from "@/components/sections/ProcessSection";
+import AboutSection from "@/components/sections/AboutSection";
 import CoverageSection from "@/components/sections/CoverageSection";
 import ContactSection from "@/components/sections/ContactSection";
 import SiteFooter from "@/components/sections/SiteFooter";
@@ -16,6 +17,7 @@ const sectionOrder = [
   "services",
   "projects",
   "process",
+  "about",
   "coverage",
   "contact",
 ];
@@ -24,6 +26,7 @@ const navItems = [
   { key: "services", label: "Services" },
   { key: "projects", label: "Projects" },
   { key: "process", label: "Process" },
+  { key: "about", label: "About" },
   { key: "coverage", label: "Coverage" },
   { key: "contact", label: "Contact" },
 ];
@@ -147,6 +150,13 @@ export default function HomePage() {
             data-section-key="process"
           >
             <ProcessSection />
+          </section>
+          <section
+            id="about"
+            data-scroll-section="true"
+            data-section-key="about"
+          >
+            <AboutSection />
           </section>
           <section
             id="coverage"

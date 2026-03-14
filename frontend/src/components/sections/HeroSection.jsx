@@ -3,9 +3,9 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const stats = [
-  { label: "Projects Delivered", value: "180+" },
-  { label: "Cities & Regions", value: "NCR + Meerut" },
-  { label: "Execution Focus", value: "Quality + Timeline" },
+  { label: "Years of Experience", value: "13+" },
+  { label: "Projects Worth", value: "₹100+ Cr" },
+  { label: "Quality Certified", value: "ISO 9001:2015" },
 ];
 
 export default function HeroSection() {
@@ -28,7 +28,7 @@ export default function HeroSection() {
             Engineered for Trust.
           </h1>
           <p className="hero-description" data-testid="hero-description">
-            We deliver modern residential and commercial construction across NCR and nearby regions, blending structural discipline, transparent execution, and premium finishing standards.
+            ISO 9001:2015 certified construction company delivering residential, commercial, and institutional projects across NCR with modern engineering techniques, experienced technical teams, and partnership with internationally acclaimed architects.
           </p>
 
           <div className="flex flex-wrap gap-4">
