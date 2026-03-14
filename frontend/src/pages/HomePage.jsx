@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { sectionBackgrounds } from "@/data/siteContent";
 import HeroSection from "@/components/sections/HeroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
+import ClientsSection from "@/components/sections/ClientsSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import AboutSection from "@/components/sections/AboutSection";
@@ -15,6 +16,7 @@ import SiteFooter from "@/components/sections/SiteFooter";
 const sectionOrder = [
   "hero",
   "services",
+  "clients",
   "projects",
   "process",
   "about",
@@ -24,6 +26,7 @@ const sectionOrder = [
 
 const navItems = [
   { key: "services", label: "Services" },
+  { key: "clients", label: "Clients" },
   { key: "projects", label: "Projects" },
   { key: "process", label: "Process" },
   { key: "about", label: "About" },
@@ -136,6 +139,13 @@ export default function HomePage() {
             data-section-key="services"
           >
             <ServicesSection />
+          </section>
+          <section
+            id="clients"
+            data-scroll-section="true"
+            data-section-key="clients"
+          >
+            <ClientsSection />
           </section>
           <section
             id="projects"

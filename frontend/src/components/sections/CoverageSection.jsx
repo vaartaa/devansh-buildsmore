@@ -54,7 +54,7 @@ export default function CoverageSection() {
             className="contact-chip"
             data-testid="coverage-phone-link"
           >
-            <Phone className="h-4 w-4" /> +91 99999 99999 (Update Later)
+            <Phone className="h-4 w-4" /> +91 9540402145
           </a>
           <p
             className="text-sm text-[#a6a6a6]"

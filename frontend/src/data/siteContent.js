@@ -2,6 +2,8 @@ export const sectionBackgrounds = {
   hero: "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&w=1600",
   services:
     "https://images.pexels.com/photos/834892/pexels-photo-834892.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  clients:
+    "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=1600",
   projects:
     "https://images.pexels.com/photos/162539/architecture-building-amsterdam-blue-sky-162539.jpeg?auto=compress&cs=tinysrgb&w=1600",
   process:
@@ -37,27 +39,93 @@ export const serviceCards = [
   },
 ];
 
-export const projectHighlights = [
+// Real completed projects
+export const completedProjects = [
   {
-    name: "Residential Projects",
-    blurb:
-      "Multi-storied residential complexes and independent homes with modern construction techniques and quality finishing.",
-    image:
-      "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=900",
+    client: "SARE Homes",
+    projectType: "Residential",
+    location: "Ghaziabad",
+    cost: "₹75 Cr",
+    image: "/clients/work/sare.png",
   },
   {
-    name: "Commercial Complexes",
-    blurb:
-      "Office buildings, retail spaces and multiplex developments designed for durability and aesthetic excellence.",
-    image:
-      "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=900",
+    client: "Renowned Group",
+    projectType: "Commercial",
+    location: "Ghaziabad",
+    cost: "₹55 Cr",
+    image: "/clients/work/renowned.png",
   },
   {
-    name: "Institutional & Industrial",
-    blurb:
-      "Specialized structures for institutional and industrial use, built with safety, efficiency and modern engineering standards.",
-    image:
-      "https://images.pexels.com/photos/2219024/pexels-photo-2219024.jpeg?auto=compress&cs=tinysrgb&w=900",
+    client: "Shubhanadam Builders",
+    projectName: "ANANDAM FLOORS",
+    projectType: "Residential",
+    location: "Meerut",
+    cost: "₹30 Cr",
+    image: "/clients/work/shri-group.png", // Using available image
+  },
+  {
+    client: "Shri Group",
+    projectType: "Residential",
+    location: "Noida West",
+    cost: "₹28 Cr",
+    image: "/clients/work/shri-group.png",
+  },
+  {
+    client: "GHMC",
+    projectType: "Residential",
+    location: "Hyderabad",
+    cost: "₹24 Cr",
+    image: "/clients/work/ghmc.png",
+  },
+  {
+    client: "NBCC",
+    projectType: "Residential",
+    location: "Noida",
+    cost: "₹22 Cr",
+    image: "/clients/work/nbcc.png",
+  },
+  {
+    client: "Nandini Homes",
+    projectType: "Residential",
+    location: "Ghaziabad",
+    cost: "₹15 Cr",
+    image: "/clients/work/nandini.png",
+  },
+];
+
+// Client logos
+export const prestigiousClients = [
+  {
+    name: "GHMC",
+    fullName: "Greater Hyderabad Municipal Corporation",
+    logo: "/clients/logos/ghmc.png",
+    sector: "Government",
+  },
+  {
+    name: "NBCC",
+    fullName: "National Buildings Construction Corporation",
+    logo: "/clients/logos/nbcc.png",
+    sector: "Government",
+  },
+  {
+    name: "Renowned Group",
+    logo: "/clients/logos/renowned.png",
+    sector: "Private",
+  },
+  {
+    name: "Nandini Homes",
+    logo: "/clients/logos/nandini.png",
+    sector: "Private",
+  },
+  {
+    name: "SARE Homes",
+    logo: "/clients/logos/sare.png",
+    sector: "Private",
+  },
+  {
+    name: "Shri Group",
+    logo: "/clients/logos/shri-group.png",
+    sector: "Private",
   },
 ];
 
