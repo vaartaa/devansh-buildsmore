@@ -10,6 +10,7 @@ import ProjectsSection from "@/components/sections/ProjectsSection";
 import ProcessSection from "@/components/sections/ProcessSection";
 import AboutSection from "@/components/sections/AboutSection";
 import CoverageSection from "@/components/sections/CoverageSection";
+import FAQSection from "@/components/sections/FAQSection";
 import ContactSection from "@/components/sections/ContactSection";
 import SiteFooter from "@/components/sections/SiteFooter";
 
@@ -21,6 +22,7 @@ const sectionOrder = [
   "process",
   "about",
   "coverage",
+  "faq",
   "contact",
 ];
 
@@ -31,6 +33,7 @@ const navItems = [
   { key: "process", label: "Process" },
   { key: "about", label: "About" },
   { key: "coverage", label: "Coverage" },
+  { key: "faq", label: "FAQ" },
   { key: "contact", label: "Contact" },
 ];
 
@@ -101,7 +104,7 @@ export default function HomePage() {
             >
               <img
                 src="/logo_devansh.png"
-                alt="Devansh Buildsmore Logo"
+                alt="Devansh Buildsmore - ISO 9001:2015 Certified Construction Company in Ghaziabad, NCR"
                 className="h-16 w-auto"
                 style={{ filter: "brightness(1.1)" }}
               />
@@ -174,6 +177,13 @@ export default function HomePage() {
             data-section-key="coverage"
           >
             <CoverageSection />
+          </section>
+          <section
+            id="faq"
+            data-scroll-section="true"
+            data-section-key="faq"
+          >
+            <FAQSection />
           </section>
           <section
             id="contact"

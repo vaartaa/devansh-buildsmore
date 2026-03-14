@@ -48,7 +48,7 @@ export default function ClientsSection() {
                 <div className="relative w-full aspect-square flex items-center justify-center mb-3">
                   <img
                     src={client.logo}
-                    alt={client.fullName || client.name}
+                    alt={`${client.fullName || client.name} - ${client.sector} Sector Client of Devansh Buildsmore Construction Company`}
                     className="max-w-full max-h-full object-contain transition-transform duration-300 group-hover:scale-110"
                     style={{ filter: 'brightness(1.2) contrast(1.1)' }}
                   />

@@ -1,0 +1,23 @@
+{
+  "short_name": "Devansh Buildsmore",
+  "name": "Devansh Buildsmore - Construction Company in Ghaziabad, NCR",
+  "description": "ISO 9001:2015 certified construction company specializing in residential and commercial construction across NCR",
+  "icons": [
+    {
+      "src": "logo_devansh.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "logo_devansh.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#ff6b00",
+  "background_color": "#0a0a0a",
+  "orientation": "portrait-primary",
+  "categories": ["business", "construction", "lifestyle"]
+}

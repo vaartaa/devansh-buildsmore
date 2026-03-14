@@ -30,7 +30,7 @@ export default function ProjectsSection() {
               <div className="project-image-wrap overflow-hidden" data-testid={`project-image-wrap-${index + 1}`}>
                 <img
                   src={project.image}
-                  alt={`${project.client} - ${project.projectType} Project`}
+                  alt={`${project.client} ${project.projectType} Construction Project in ${project.location} - ${project.cost} - Devansh Buildsmore`}
                   className="project-image transition-transform duration-500 group-hover:scale-110"
                   data-testid={`project-image-${index + 1}`}
                 />

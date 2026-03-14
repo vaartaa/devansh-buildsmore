@@ -5,7 +5,7 @@ export default function SiteFooter() {
         <div className="flex items-center gap-4 mb-3">
           <img
             src="/logo_devansh.png"
-            alt="Devansh Buildsmore"
+            alt="Devansh Buildsmore Logo - Construction Company in Ghaziabad"
             className="h-28 w-auto"
             style={{ filter: "brightness(1.1)" }}
           />
