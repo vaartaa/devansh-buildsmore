@@ -12,8 +12,7 @@ export const sectionBackgrounds = {
     "https://images.pexels.com/photos/416405/pexels-photo-416405.jpeg?auto=compress&cs=tinysrgb&w=1600",
   coverage:
     "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1600",
-  faq:
-    "https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=1600",
+  faq: "https://images.pexels.com/photos/7641824/pexels-photo-7641824.jpeg?auto=compress&cs=tinysrgb&w=1600",
   contact:
     "https://images.pexels.com/photos/1105766/pexels-photo-1105766.jpeg?auto=compress&cs=tinysrgb&w=1600",
 };
@@ -63,7 +62,7 @@ export const completedProjects = [
     projectType: "Residential",
     location: "Meerut",
     cost: "₹30 Cr",
-    image: "/clients/work/shri-group.png", // Using available image
+    image: "/clients/work/anandam.png", // Using available image
   },
   {
     client: "Shri Group",
@@ -177,9 +176,11 @@ export const companyInfo = {
 };
 
 // Vision & Mission
-export const vision = "To be globally renowned as one of the best Engineering & Construction companies, continuing efforts to implement the latest techniques of engineering construction.";
+export const vision =
+  "To be globally renowned as one of the best Engineering & Construction companies, continuing efforts to implement the latest techniques of engineering construction.";
 
-export const mission = "To satisfy every client's need for a better experience in real estate with the help of a well-managed engineering team and close partnership with internationally acclaimed architects to achieve aesthetic, efficient and quality development.";
+export const mission =
+  "To satisfy every client's need for a better experience in real estate with the help of a well-managed engineering team and close partnership with internationally acclaimed architects to achieve aesthetic, efficient and quality development.";
 
 // About content
 export const aboutText = `Devansh Buildsmore is an ISO 9001:2015 certified construction company established in 2013 as a sole proprietorship, headed by Mr. Vivek Sharma. With over 13 years of experience in the construction industry, we have successfully completed projects worth over ₹100 crores across NCR and nearby regions.
