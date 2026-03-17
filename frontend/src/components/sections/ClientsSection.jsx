@@ -1,10 +1,57 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Award } from "lucide-react";
+import { Award, ChevronLeft, ChevronRight } from "lucide-react";
 import { prestigiousClients } from "@/data/siteContent";
 
 export default function ClientsSection() {
+  const [position, setPosition] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
   // Duplicate the clients array for seamless infinite scroll
-  const duplicatedClients = [...prestigiousClients, ...prestigiousClients];
+  const duplicatedClients = [...prestigiousClients, ...prestigiousClients, ...prestigiousClients];
+
+  const cardWidth = 280 + 24; // card width + gap
+  const totalWidth = prestigiousClients.length * cardWidth;
+
+  // Auto-scroll effect
+  useEffect(() => {
+    if (isPaused) return;
+
+    const intervalId = setInterval(() => {
+      setPosition((prev) => {
+        const newPos = prev - 1;
+        // Reset when we've scrolled through one full set
+        if (Math.abs(newPos) >= totalWidth) {
+          return 0;
+        }
+        return newPos;
+      });
+    }, 30); // Adjust speed here (lower = faster)
+
+    return () => clearInterval(intervalId);
+  }, [isPaused, totalWidth]);
+
+  const handlePrevious = () => {
+    setPosition((prev) => {
+      const newPos = prev + cardWidth;
+      // Loop back if we've gone too far right
+      if (newPos > 0) {
+        return -(totalWidth - cardWidth);
+      }
+      return newPos;
+    });
+  };
+
+  const handleNext = () => {
+    setPosition((prev) => {
+      const newPos = prev - cardWidth;
+      // Loop back if we've gone too far left
+      if (Math.abs(newPos) >= totalWidth) {
+        return 0;
+      }
+      return newPos;
+    });
+  };
 
   return (
     <div className="section-shell">
@@ -40,17 +87,10 @@ export default function ClientsSection() {
         <div className="relative overflow-hidden">
           <motion.div
             className="flex gap-6"
-            animate={{
-              x: [0, -100 * prestigiousClients.length],
-            }}
-            transition={{
-              x: {
-                repeat: Infinity,
-                repeatType: "loop",
-                duration: 25,
-                ease: "linear",
-              },
-            }}
+            animate={{ x: position }}
+            transition={{ type: "tween", duration: 0.5, ease: "linear" }}
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
           >
             {duplicatedClients.map((client, index) => (
               <div
@@ -86,6 +126,22 @@ export default function ClientsSection() {
           {/* Fade edges for smooth appearance */}
           <div className="absolute top-0 left-0 bottom-0 w-24 bg-gradient-to-r from-[#0a0a0a] to-transparent pointer-events-none z-10" />
           <div className="absolute top-0 right-0 bottom-0 w-24 bg-gradient-to-l from-[#0a0a0a] to-transparent pointer-events-none z-10" />
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={handlePrevious}
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-[#ff6b00]/50 bg-[#0a0a0a]/90 backdrop-blur-sm flex items-center justify-center text-[#ff9c52] hover:bg-[#ff6b00]/20 hover:border-[#ff6b00] transition-all duration-300 hover:scale-110"
+            aria-label="Previous clients"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+          <button
+            onClick={handleNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full border border-[#ff6b00]/50 bg-[#0a0a0a]/90 backdrop-blur-sm flex items-center justify-center text-[#ff9c52] hover:bg-[#ff6b00]/20 hover:border-[#ff6b00] transition-all duration-300 hover:scale-110"
+            aria-label="Next clients"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
         </div>
 
         {/* Trust Statement */}
