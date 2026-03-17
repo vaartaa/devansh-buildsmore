@@ -32,13 +32,29 @@
     inset: 0;
     background:
         radial-gradient(circle at 75% 18%, rgba(255, 107, 0, 0.15), transparent 32%),
+        radial-gradient(circle at 25% 80%, rgba(255, 107, 0, 0.08), transparent 40%),
         linear-gradient(180deg, rgba(5, 5, 5, 0.83), rgba(5, 5, 5, 0.88));
 }
 
 .noise-layer {
     position: absolute;
     inset: 0;
-    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+    background-image:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 107, 0, 0.03) 2px,
+            rgba(255, 107, 0, 0.03) 4px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(255, 107, 0, 0.03) 2px,
+            rgba(255, 107, 0, 0.03) 4px
+        ),
+        url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
     opacity: 0.12;
     mix-blend-mode: overlay;
 }
@@ -576,6 +592,93 @@
     box-shadow:
         0 -4px 24px rgba(0, 0, 0, 0.5),
         inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+/* Magnetic button effect */
+.magnetic-button {
+    transition: transform 0.2s ease;
+}
+
+/* Progress line animation for process section */
+.process-progress-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(180deg, #ff6b00 0%, #ff9c52 100%);
+    box-shadow: 0 0 10px rgba(255, 107, 0, 0.5);
+}
+
+.process-progress-line::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: #ff6b00;
+    border-radius: 50%;
+    box-shadow: 0 0 16px rgba(255, 107, 0, 0.8);
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 16px rgba(255, 107, 0, 0.8);
+        transform: translateX(-50%) scale(1);
+    }
+    50% {
+        box-shadow: 0 0 24px rgba(255, 107, 0, 1);
+        transform: translateX(-50%) scale(1.2);
+    }
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ff6b00 0%, #ff9c52 100%);
+    transform-origin: 0%;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(255, 107, 0, 0.5);
+}
+
+/* Text reveal animation */
+.text-reveal {
+    overflow: hidden;
+    display: inline-block;
+}
+
+.text-reveal-content {
+    display: inline-block;
+    animation: reveal-text 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+@keyframes reveal-text {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced image hover with ken burns effect */
+.ken-burns-effect {
+    overflow: hidden;
+}
+
+.ken-burns-effect img {
+    transition: transform 8s ease;
+}
+
+.ken-burns-effect:hover img {
+    transform: scale(1.1) rotate(1deg);
 }
 
 @media (prefers-reduced-motion: reduce) {

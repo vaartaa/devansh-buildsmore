@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AnimatedCounter from "@/components/AnimatedCounter";
 
 const stats = [
   { label: "Years of Experience", value: "13+" },
@@ -92,10 +93,14 @@ export default function HeroSection() {
         >
           <p className="mb-6 text-sm uppercase tracking-[0.35em] text-[#ff9c52]">Performance Snapshot</p>
           <div className="space-y-6">
-            {stats.map((stat) => (
+            {stats.map((stat, index) => (
               <div key={stat.label} className="border-b border-[#333333] pb-5 last:border-none last:pb-0">
                 <p className="text-[2rem] font-bold tracking-tight text-white" data-testid={`hero-stat-value-${stat.label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
-                  {stat.value}
+                  {index < 2 ? (
+                    <AnimatedCounter value={stat.value} duration={2500} />
+                  ) : (
+                    stat.value
+                  )}
                 </p>
                 <p className="text-sm text-[#b8b8b8]" data-testid={`hero-stat-label-${stat.label.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}>
                   {stat.label}

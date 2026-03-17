@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Lenis from "lenis";
 import { ArrowRight } from "lucide-react";
 import { sectionBackgrounds } from "@/data/siteContent";
+import ScrollProgress from "@/components/ScrollProgress";
 import HeroSection from "@/components/sections/HeroSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import ClientsSection from "@/components/sections/ClientsSection";
@@ -79,6 +80,7 @@ export default function HomePage() {
 
   return (
     <div className="app-shell" data-testid="devansh-home-page">
+      <ScrollProgress />
       <div className="bg-stage" aria-hidden="true">
         {sectionOrder.map((sectionKey) => (
           <div
