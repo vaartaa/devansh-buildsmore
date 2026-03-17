@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -9,6 +10,28 @@ const stats = [
 ];
 
 export default function HeroSection() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const springConfig = { damping: 25, stiffness: 150 };
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [5, -5]), springConfig);
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-5, 5]), springConfig);
+
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    mouseX.set(x);
+    mouseY.set(y);
+  };
+
+  const handleMouseLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+  };
+
   return (
     <div className="section-shell">
       <div className="content-container grid gap-10 lg:grid-cols-[1.3fr_0.7fr]">
@@ -57,6 +80,13 @@ export default function HeroSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.8, delay: 0.15 }}
+          style={{
+            rotateX,
+            rotateY,
+            transformStyle: "preserve-3d",
+          }}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
           className="surface-panel"
           data-testid="hero-stats-panel"
         >
