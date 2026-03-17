@@ -50,11 +50,11 @@ export const completedProjects = [
     image: "/clients/work/sare.png",
   },
   {
-    client: "Renowned Group",
+    client: "Renox Group",
     projectType: "Commercial",
     location: "Ghaziabad",
     cost: "₹55 Cr",
-    image: "/clients/work/renowned.png",
+    image: "/clients/work/renox.png",
   },
   {
     client: "Shubhanadam Builders",
@@ -109,8 +109,8 @@ export const prestigiousClients = [
     sector: "Government",
   },
   {
-    name: "Renowned Group",
-    logo: "/clients/logos/renowned.png",
+    name: "Renox Group",
+    logo: "/clients/logos/renox.png",
     sector: "Private",
   },
   {
@@ -126,6 +126,11 @@ export const prestigiousClients = [
   {
     name: "Shri Group",
     logo: "/clients/logos/shri-group.png",
+    sector: "Private",
+  },
+  {
+    name: "Shubhanadam Builders",
+    logo: "/clients/logos/shubhanadam.png",
     sector: "Private",
   },
 ];
